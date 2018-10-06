@@ -1,0 +1,17 @@
+{
+  "name": "blog-api",
+  "version": "1.0.0",
+  "description": "Blog API for Thinkful Challenge",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "James Nighswonger",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "uuid": "^3.3.2"
+  }
+}
