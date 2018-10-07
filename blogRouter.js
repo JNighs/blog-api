@@ -50,13 +50,13 @@ router.put('/:id', (req, res) => {
     }
 
     console.log(`Updating blog post \`${req.params.id}\``);
-    BlogPosts.update({
+    const updatedItem = BlogPosts.update({
         id: req.params.id,
         title: req.body.title,
         content: req.body.content,
         author: req.body.author
     });
-    res.status(204).end();
+    res.status(200).json(updatedItem);
 })
 
 module.exports = router;
