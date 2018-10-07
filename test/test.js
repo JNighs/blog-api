@@ -20,7 +20,7 @@ describe("Blog Posts", function () {
             expect(res).to.have.status(200);
             expect(res).to.be.json;
             expect(res.body).to.be.a("array");
-            expect(res.body.lenth).to.be.at.least(1);
+            expect(res.body.length).to.be.at.least(1);
 
             const expectedKeys = ['title', 'content', 'author'];
             res.body.forEach(function (item) {
@@ -39,7 +39,7 @@ describe("Blog Posts", function () {
             expect(res.body).to.include.keys("title", "content", "author");
             expect(res.body.id).to.not.equal(null);
             expect(res.body).to.deep.equal(
-                Object.assign(newItem, { id: res.body.id })
+                Object.assign(newPost, { id: res.body.id })
             );
         });
     });
