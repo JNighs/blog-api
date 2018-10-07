@@ -4,7 +4,7 @@ deploy:
   provider: heroku
   api_key:
     secure: sRQXQcJIruMq/A9fjBEDL1kNRt6RM/DUdYAJPd0nvCU1sn1bj9GNfxdxxKsGH7YWfUDRHdueaDCgfikyadxs+6W4NT48sfBc5Lf+qfIHvpzSUln4rYEQqGohAb1Lv6uPvZPg22XLPuNBfuOOsV90C7Nwvw32lz17VtWdES+efR/0318XQHwyS2XmE8T4wwVaJOIXDzKQaw4+dPvnt9OUaEfJHPLPZUL5WJal67E7DM8le7Q2A4Zk+d2w+1chHkzP+Cen+J4EO1vHsxkVF1+vM8VLkwbpnCoH5Ql5synVLXSE8Gmedk+xMQZ6njAahbd8lhNLRYEPTddYD4A26QVh8VR/+5nrtt+mRuyj+deUdWr+AxOnrqCVYxpMKz6eVPLG9vQNZPN4q2kaEbIaVpa64Ltg6J70tHb4ezBVohB4lTPSAYFZTpO4zOcM7SfKBjC3aRqZ6HFhfilNiYKbnwjqzfPAQ+6ZC4dSUXIyrIP0BR7cugTmvP9BE2B+2yAH+bPGLwt1TkA0L/+aRCRU+AsbUFicfgPMc1ekoKfFLcaB9GHTTvITUCyqGzu53cyymF1fBCQPezPI+v1oYr8NaeuSD2W1geYSJmxW3tRrDK8qs5nkg673ADuPWZ7WSivNSPiitumeaPcVr5EeQI7klzOoJWSY8bkvd3738IqM/Yhc834=
-  app: blog-api
+  app: quiet-ridge-73420
   on:
     repo: JNighs/blog-api
     branch: feature/test-solution
