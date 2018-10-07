@@ -4,7 +4,8 @@
   "description": "Blog API for Thinkful Challenge",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "mocha"
   },
   "author": "James Nighswonger",
   "license": "ISC",
@@ -13,5 +14,9 @@
     "express": "^4.16.3",
     "morgan": "^1.9.1",
     "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
   }
 }
