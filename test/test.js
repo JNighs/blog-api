@@ -53,6 +53,7 @@ describe("Blog Posts", function () {
 
         return (chai.request(app).get("/blog-posts").then(function (res) {
             updateData.id = res.body[0].id;
+            updateData.publishDate = res.body[0].publishDate;
             return chai.request(app).put(`/blog-posts/${updateData.id}`).send(updateData);
         })
             .then(function (res) {
