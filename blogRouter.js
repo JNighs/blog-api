@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
     res.json(BlogPosts.get());
 });
 
-router.post('/', jsonParser, (req, res) => {
+router.post('/', (req, res) => {
     const requiredFields = ['title', 'content', 'author'];
     for (let i = 0; i < requiredFields.length; i++) {
         const field = requiredFields[i];
@@ -32,7 +32,7 @@ router.delete('/:id', (req, res) => {
     res.status(204).end();
 });
 
-router.put('/:id', jsonParser, (req, res) => {
+router.put('/:id', (req, res) => {
     const requiredFields = ['title', 'content', 'author'];
     for (let i = 0; i < requiredFields.length; i++) {
         const field = requiredFields[i];
