@@ -1,5 +1,6 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
+const { PORT, TEST_DATABASE_URL } = require("./config");
 
 const { app, runServer, closeServer } = require("../server");
 
@@ -9,7 +10,7 @@ chai.use(chaiHttp);
 
 describe("Blog Posts", function () {
     before(function () {
-        return runServer();
+        return runServer(TEST_DATABASE_URL, PORT);
     });
     after(function () {
         return closeServer();

@@ -1,10 +1,9 @@
 const express = require('express');
 const mongoose = require("mongoose");
-
-mongoose.Promise = global.Promise;
-
 const { PORT, DATABASE_URL } = require("./config");
 const blogRouter = require("./blogRouter");
+
+mongoose.Promise = global.Promise;
 
 const app = express();
 app.use(express.json());
