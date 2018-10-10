@@ -4,8 +4,7 @@
   "description": "Blog API for Thinkful Challenge",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js",
-    "test": "mocha"
+    "start": "node server.js"
   },
   "author": "James Nighswonger",
   "license": "ISC",
