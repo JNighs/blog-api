@@ -9,6 +9,7 @@ const expect = chai.expect;
 chai.use(chaiHttp);
 
 describe("Blog Posts", function () {
+    /*
     before(function () {
         return runServer(TEST_DATABASE_URL, PORT);
     });
@@ -30,7 +31,7 @@ describe("Blog Posts", function () {
             });
         });
     });
-/*
+
     it("should add a blog post on POST", function () {
         const newPost = { title: "New Title", content: "New content", author: "New Author" };
         return chai.request(app).post("/blog-posts").send(newPost).then(function (res) {
