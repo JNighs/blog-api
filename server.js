@@ -8,6 +8,8 @@ mongoose.Promise = global.Promise;
 const app = express();
 app.use(express.json());
 
+console.log(DATABASE_URL);
+
 //Router
 app.use("/blog-posts", blogRouter);
 
