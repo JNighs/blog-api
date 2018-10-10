@@ -1,8 +1,9 @@
 const express = require("express");
 const router = express.Router();
 
-const { BlogPosts } = require('./models');
+const { BlogPost } = require("./models");
 
+/*
 BlogPosts.create('Title One', 'Blah', 'James Nighswonger');
 BlogPosts.create('Title Two', 'Blah Blah', 'James Nighswonger');
 BlogPosts.create('Title Three', 'Blah Blah Blah', 'James Nighswonger');
@@ -10,7 +11,29 @@ BlogPosts.create('Title Three', 'Blah Blah Blah', 'James Nighswonger');
 router.get('/', (req, res) => {
     res.json(BlogPosts.get());
 });
+*/
 
+// GET requests to /restaurants => return 10 restaurants
+router.get("/", (req, res) => {
+    BlogPost.find()
+      // we're limiting because restaurants db has > 25,000
+      // documents, and that's too much to process/return
+      .limit(10)
+      // success callback: for each restaurant we got back, we'll
+      // call the `.serialize` instance method we've created in
+      // models.js in order to only expose the data we want the API return.    
+      .then(blogPosts => {
+        res.json({
+            blogPosts: blogPosts.map(blogPost => blogPost.serialize())
+        });
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({ message: "Internal server error" });
+      });
+  });
+
+/*
 router.post('/', (req, res) => {
     const requiredFields = ['title', 'content', 'author'];
     for (let i = 0; i < requiredFields.length; i++) {
@@ -60,3 +83,4 @@ router.put('/:id', (req, res) => {
 })
 
 module.exports = router;
+*/
